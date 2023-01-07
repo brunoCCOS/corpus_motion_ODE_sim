@@ -10,13 +10,15 @@ G           = .01   # Constante de gravidade  CONDIÇÂO DE EQUILIBRIO ACHADA: .
 Ms          = 2.    #Massa do corpo maior CONDIÇÂO DE EQUILIBRIO ACHADA:2.
 Me          = 5.    #Massa do corpo menor CONDIÇÂO DE EQUILIBRIO ACHADA:5.
 d0          = 2.    #Distancia entre os corpos CONDIÇÂO DE EQUILIBRIO ACHADA:2
-v0      = .01   #velocidade inicial do corpo no eixo y CONDIÇÂO DE EQUILIBRIO ACHADA: .01   
-debbuging = False
+v0      = .01       #velocidade inicial do corpo no eixo y CONDIÇÂO DE EQUILIBRIO ACHADA: .01   
+debbuging = False   #True se quiser ver os prints
+timespace =  200.0  #Aumentar o número de amostras de tempo
+
 #Corpus
 A = Corpus(np.array([0.,0.]),np.array([0.,0.]),Ms) #Corpo imóvel
-B = Corpus(np.array([AU,0.]),np.array([0.,v0]),Me) #Corpo móvel
+B = Corpus(np.array([d0,0.]),np.array([0.,v0]),Me) #Corpo móvel
 
-timespace =  200.0#Aumentar o número de amostras
+#Array de posições
 pos = np.array([B.pos])
 
 for i in range(int(timespace/h)):
