@@ -41,10 +41,4 @@ for i in range(int(timespace/h)):
         print('Vetor velocidade absoluta:',B.velocity)
         print('Posição:', B.pos)
 # print(pos[0:10])
-plt.plot(pos[:,0], pos[:,1])
-plt.scatter(*A.pos,c='y')
-plt.xlabel('x')
-plt.ylabel('y')
-
-plt.show()
-
+plot_space(pos[:,0],pos[:,1],A.pos)

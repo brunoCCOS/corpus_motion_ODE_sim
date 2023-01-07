@@ -35,7 +35,7 @@ def rungekutta4(f, y0, t,h, args=()):
 
 def plot_space(x,y,origin):
 
-    plt.scatter(x, y)
+    plt.plot(x, y)
     plt.scatter(*origin,c='y')
     plt.xlabel('x')
     plt.ylabel('y')
