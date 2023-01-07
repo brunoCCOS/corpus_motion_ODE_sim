@@ -18,7 +18,6 @@ def rungekutta4(f, y0, t,h, args=()):
     # n = len(t)
     # y = np.zeros((n, len(y0)))
     y = y0
-    print('y:',y)
     # print('y0:',y0)
     # print(h)
     k1 = f(y, t, *args)
@@ -36,7 +35,7 @@ def rungekutta4(f, y0, t,h, args=()):
 
 def plot_space(x,y,origin):
 
-    plt.plot(x, y)
+    plt.scatter(x, y)
     plt.scatter(*origin,c='y')
     plt.xlabel('x')
     plt.ylabel('y')
