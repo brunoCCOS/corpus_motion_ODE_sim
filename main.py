@@ -21,14 +21,13 @@ timespace = np.linspace(0,100000000,100) #Aumentar o número de amostras aumenta
 
 pos = np.array([B.pos])
 
-
 for i in range(len(timespace)-1):
     # print('Tempo:',t)
     vdist = B.pos - A.pos #Vetor distancia
     dist = np.linalg.norm(vdist) #Modulo
     udist = vdist/dist #Vetor unitário
     h = timespace[i+1] - timespace[i]
-    print(gravitational_acel(dist,G,Ms))
+    # print(gravitational_acel([dist,B.cntp_vel],0,G,Ms))
     
     dist,B.cntp_vel = rungekutta4(gravitational_acel,[dist,B.cntp_vel],timespace[i],h,(G,Ms)) #Distancia no futuro aproximada por Runge kutta
     
