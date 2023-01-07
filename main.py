@@ -32,7 +32,7 @@ for i in range(len(timespace)-1):
     dist,B.cntp_vel = rungekutta4(gravitational_acel,[dist,B.cntp_vel],timespace[i],h,(G,Ms)) #Distancia no futuro aproximada por Runge kutta
     
     vdist = udist*dist #Usa o vetor unitário da distancia * o valor absoluto da distancia pra calcular o novo vetor distancia
-    
+    # print(vdist)
     B.pos = vdist + B.velocity #Soma ao vetor distancia a variação em função da velocidade inicial
     
     # print('vetor distancia:',vdist)
