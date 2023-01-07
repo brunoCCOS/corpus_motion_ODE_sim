@@ -9,12 +9,12 @@ h           = 0.01  #Step size for runge kutta
 G           = .01   # Constante de gravidade  CONDIÇÂO DE EQUILIBRIO ACHADA: .01 
 Ms          = 2.    #Massa do corpo maior CONDIÇÂO DE EQUILIBRIO ACHADA:2.
 Me          = 5.    #Massa do corpo menor CONDIÇÂO DE EQUILIBRIO ACHADA:5.
-AU          = 2.    #Distancia entre os corpos CONDIÇÂO DE EQUILIBRIO ACHADA:2
-e_ap_v      = .01   #velocidade inicial do corpo no eixo y CONDIÇÂO DE EQUILIBRIO ACHADA: .01   
+d0          = 2.    #Distancia entre os corpos CONDIÇÂO DE EQUILIBRIO ACHADA:2
+v0      = .01   #velocidade inicial do corpo no eixo y CONDIÇÂO DE EQUILIBRIO ACHADA: .01   
 debbuging = False
 #Corpus
 A = Corpus(np.array([0.,0.]),np.array([0.,0.]),Ms) #Corpo imóvel
-B = Corpus(np.array([AU,0.]),np.array([0.,e_ap_v]),Me) #Corpo móvel
+B = Corpus(np.array([AU,0.]),np.array([0.,v0]),Me) #Corpo móvel
 
 timespace =  200.0#Aumentar o número de amostras
 pos = np.array([B.pos])
