@@ -29,6 +29,7 @@ for i in range(len(timespace)-1):
     udist = vdist/dist #Vetor unitário
     h = timespace[i+1] - timespace[i]
     print(gravitational_acel(dist,G,Ms))
+    
     dist,B.cntp_vel = rungekutta4(gravitational_acel,[dist,B.cntp_vel],timespace[i],h,(G,Ms))
     
     vdist = udist*dist
