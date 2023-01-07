@@ -30,15 +30,15 @@ for i in range(len(timespace)-1):
     h = timespace[i+1] - timespace[i]
     print(gravitational_acel(dist,G,Ms))
     
-    dist,B.cntp_vel = rungekutta4(gravitational_acel,[dist,B.cntp_vel],timespace[i],h,(G,Ms))
+    dist,B.cntp_vel = rungekutta4(gravitational_acel,[dist,B.cntp_vel],timespace[i],h,(G,Ms)) #Distancia no futuro aproximada por Runge kutta
     
-    vdist = udist*dist
+    vdist = udist*dist #Usa o vetor unitário da distancia * o valor absoluto da distancia pra calcular o novo vetor distancia
     
-    B.pos = vdist + B.velocity
+    B.pos = vdist + B.velocity #Soma ao vetor distancia a variação em função da velocidade inicial
     
     # print('vetor distancia:',vdist)
     # print('pos:',B.pos)
-    pos = np.append(pos,[B.pos],axis=0)
+    pos = np.append(pos,[B.pos],axis=0) #Array de valores
 
 print(pos[0:10])
 # print(pos)

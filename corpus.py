@@ -10,15 +10,7 @@ class Corpus():
         self.mass = mass
         self.cntp_vel = 0
 
-    def move(self):
-        self.pos += self.velocity
-        # print(self.pos)
-        return self.pos
-
-    def update_vel(self,acel:np.array):
-        self.vel += acel
-
-    def vel_cntp(self,vel):
+    def set_cntp_vel(self,vel):
         self.cntp_vel = vel
 
 

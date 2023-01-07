@@ -1,13 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # s'' = -MG/s^2
+#Transformar essa equalçao num sistema de equações de primeira ordem
+
 # v = s'
 # v' = a = -MG/s^2
-# se y = [s(t),v(t)] entao y' = [v(t),-MG/s(t)^2]
+# Fazendo a substituição esse é o novo sistema
+# em coordenadadas fica
+# y = [s(t),v(t)] entao y' = [v(t),-MG/s(t)^2]
 def gravitational_acel(d:float,t:float,M:float,G:float):
 
-    return np.array([d[1], -(M*G)/(d[0]**2)])
+    return np.array([d[1], -(M*G)/(d[0]**2)]) # retorna um array com [velocidade,aceleração] = [s'(t),s''(t)]
 
 def rungekutta4(f, y0, t,h, args=()):
     # n = len(t)
